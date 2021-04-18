@@ -1,0 +1,41 @@
+<app-customer-layout></app-customer-layout>
+<div class="container container-fluid" style="border: 1px solid #b0c4de;font-family:'Times New Roman'">
+  <br />
+  <div class="container" style="text-align:center;">
+    <h2><b>Package Details</b></h2>
+  </div>
+  <br />
+  <br />
+  <div class="container" style="text-align:left">
+    <h6 style="font-weight:bold;font-family:'Times New Roman'">Package Name :<b style=" color: #e9967a">{{  packageName }}</b></h6>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table" style="border:5px solid rgba(220,230,242,1);" *ngIf="packageDetails && packageDetails.length">
+      <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+        <th style="text-align:justify;">PlacesToVisit</th>
+        <th style="text-align:justify">Package Description</th>
+        <th style="text-align:justify">Package Details</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let package of packageDetails" style="background-color:white">
+        <td style="text-align:justify"> {{package.visitingPlaces }} </td>
+        <td style="text-align:justify"> {{package.pkgDescription}} </td>
+        <td style="text-align:justify">
+          <div class="col"> <b style="font-weight:bold;">Days/Nights : </b>  {{package.pkgDays}}/{{package.pkgNights}} </div>
+          <div class="col"> <b style="font-weight:bold;">Price : </b> {{package.costPerAdult}} </div>
+          <div class="col"> <b style="font-weight:bold;">Accomodation : </b> {{package.accomodationAvailable?'Available':'Not Available'}}</div>
+        </td>
+        <td>
+          <div class="col"><img title="Book Package" src="assets/images.png"></div>
+          <div class="col"><p style="font-size:smaller"><b>Book Package</b></p></div>
+        </td>
+        <!--<td><button (click)="navigateToBookPackage(100)">Book</button></td>  (click)="navigateToBookPackage(package.packageDetailsId)" -->
+      </tr>
+    </table>
+  </div>
+  <div *ngIf="showMsgDiv" style="">
+    <h4 class="jumbotron" style="text-align:center;">No package details available</h4>
+  </div>
+  <br />
+</div>

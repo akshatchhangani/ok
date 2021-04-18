@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Travel Away</a>
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="/packages" class="nav-link" href="#">Packages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/viewCart" href="#">Vehicles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/viewPurchases" href="#">Hotels</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/feedback" class="nav-link" href="#">Bookings</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/ratings" class="nav-link" href="#">Search Packages By Destination</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/profile" class="nav-link" href="#">Edit Profile</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/ratings" class="nav-link" href="#">Customer Care</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <p  class="nav-link" href="#">{{first}}</p>
+      </li>
+      <li class="nav-item">
+        <a (click)="logOut()" class="nav-link" href="#">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
